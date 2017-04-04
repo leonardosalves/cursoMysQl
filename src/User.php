@@ -8,12 +8,61 @@
  */
 namespace src;
 
-class User extends Database
+class User
 {
     private $table = "user";
-    private $id;
+    public $id;
     private $name;
     private $email;
+    private $importancia;
+    private $cpf_cnpj;
+    private $endereco;
+    private $tipo;
+
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    public function setTipo($tipo)
+    {
+        $this->tipo = $tipo;
+        return $this;
+    }
+
+    public function getImportancia()
+    {
+        return $this->importancia;
+    }
+
+    public function setImportancia($importancia)
+    {
+        $this->importancia = $importancia;
+        return $this;
+    }
+
+    public function getCpfCnpj()
+    {
+        return $this->cpf_cnpj;
+    }
+
+    public function setCpfCnpj($cpf_cnpj)
+    {
+        $this->cpf_cnpj = $cpf_cnpj;
+        return $this;
+    }
+
+    public function getEndereco()
+    {
+        return $this->endereco;
+    }
+
+    public function setEndereco($endereco)
+    {
+        $this->endereco = $endereco;
+        return $this;
+    }
+
 
     public function getTable()
     {
